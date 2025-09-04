@@ -23,8 +23,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Seeker Portfolio",
-  description: "Consist of my projects.",
+  title: "SeekerDev",
+  description: "Portfolio of John Albert Seeker - Full Stack Developer",
 };
 
 export default function RootLayout({

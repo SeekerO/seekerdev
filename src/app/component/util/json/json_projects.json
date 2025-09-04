@@ -1,0 +1,381 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "V2 iMonitor (Web-App)",
+      "subtitle": [
+        "TAILWIND",
+        "CSS3",
+        "HTML5",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "REACT.JS",
+        "VITE.JS"
+      ],
+      "src": "iMonitor",
+      "href": "https://imonitor.site/",
+      "discrp": "A monitoring and management system with built in messaging system for OJT student in STI Santa Maria College",
+      "status": "online",
+      "allowToOpenSite": true,
+      "main": {
+        "src": "main",
+        "title": "Landing Page",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "Monitoring",
+        "disc": "Aci"
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "Dashboard",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "Upload Log",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    },
+    {
+      "id": 2,
+      "title": "Send-Here (Web-App)",
+      "subtitle": [
+        "TAILWIND",
+        "CSS3",
+        "HTML5",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "REACT.JS",
+        "SUPABASE"
+      ],
+      "src": "Send_here",
+      "href": "https://seekero.github.io/Send_Here/",
+      "discrp": "A mock up Messenger",
+      "status": "offline database",
+      "allowToOpenSite": false,
+      "main": {
+        "src": "main",
+        "title": "",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "",
+        "disc": ""
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    },
+    {
+      "id": 3,
+      "title": "SEEKERDEV (Website)",
+      "subtitle": [
+        "TAILWIND",
+        "CSS3",
+        "HTML5",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "REACT.JS"
+      ],
+      "src": "Seekerdev",
+      "href": "#",
+      "discrp": "My personal portoflio where it shows my previous projects",
+      "status": "online",
+      "allowToOpenSite": true,
+      "main": {
+        "src": "main",
+        "title": "",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "",
+        "disc": ""
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    },
+    {
+      "id": 4,
+      "title": "UptoMovie (Website)",
+      "subtitle": [
+        "TAILWIND",
+        "CSS3",
+        "HTML5",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "REACT.JS",
+        "VITE.JS",
+        "TMDB_API"
+      ],
+      "src": "uptomovie",
+      "href": "https://uptomovie.vercel.app",
+      "discrp": "A movie and trailers information fetch in TMDB api.",
+      "status": "Under Development",
+      "allowToOpenSite": false,
+      "main": {
+        "src": "main",
+        "title": "",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "",
+        "disc": ""
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    },
+    {
+      "id": 5,
+      "title": "Akira Moving System (Website)",
+      "subtitle": ["WORDPRESS", "PHP", "CSS3", "ELEMENTOR"],
+      "src": "Akira",
+      "href": "https://akiramovingsystems.com/",
+      "discrp": "A showcase website for Akira Moving System",
+      "status": "online",
+      "allowToOpenSite": true,
+      "main": {
+        "src": "main",
+        "title": "",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "",
+        "disc": ""
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    },
+    {
+      "id": 6,
+      "title": "TODO (Web-App)",
+      "subtitle": [
+        "TAILWIND",
+        "CSS3",
+        "HTML5",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "REACT.JS",
+        "VITE.JS",
+        "LOCALSTORAGE"
+      ],
+      "src": "Todo",
+      "href": "https://to-do-list-ten-theta.vercel.app/",
+      "discrp": "To-Do and Scheduler Application",
+      "status": "online",
+      "allowToOpenSite": true,
+      "main": {
+        "src": "main",
+        "title": "",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "",
+        "disc": ""
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    },
+    {
+      "id": 7,
+      "title": "TrackITpos (Web-App)",
+      "subtitle": [
+        "TAILWIND",
+        "CSS3",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "REACT.JS",
+        "VITE.JS",
+        "FIREBASE"
+      ],
+      "src": "trackit",
+      "href": "https://track-it-pos.vercel.app",
+      "discrp": "A mini POS system using firebase",
+      "status": "online",
+      "allowToOpenSite": true,
+      "main": {
+        "src": "main",
+        "title": "",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "",
+        "disc": ""
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    },
+    {
+      "id": 1,
+      "title": "FoodSearchy (Website)",
+      "subtitle": [
+        "TAILWIND",
+        "CSS3",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "REACT.JS",
+        "VITE.JS",
+        "API"
+      ],
+      "src": "foodsearchy",
+      "href": "https://foodsearch-khaki.vercel.app",
+      "discrp": "A simple webiste food recipe searcher using API in theMealDB.",
+      "status": "online",
+      "allowToOpenSite": true,
+      "main": {
+        "src": "main",
+        "title": "",
+        "disc": ""
+      },
+      "pic1": {
+        "src": "pic1",
+        "title": "",
+        "disc": ""
+      },
+      "pic2": {
+        "src": "pic2",
+        "title": "",
+        "disc": ""
+      },
+      "pic3": {
+        "src": "pic3",
+        "title": "",
+        "disc": ""
+      },
+      "pic4": {
+        "src": "pic4",
+        "title": "",
+        "disc": ""
+      },
+      "pic5": {
+        "src": "pic5",
+        "title": "",
+        "disc": ""
+      }
+    }
+  ]
+}

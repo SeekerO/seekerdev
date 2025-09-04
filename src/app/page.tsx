@@ -2,13 +2,17 @@
 
 import { RefObject, useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Header from "./component/Header";
-import Hero from "./component/Hero";
-import Projects from "./component/Projects";
-import Tech from "./component/Tech";
+import { useIsAtBottom } from '../app/component/hooks/useIsBottom';
+import { useIsScrolling } from './component/hooks/useIsScrolling';
+import { LuArrowUpFromDot } from 'react-icons/lu';
+import Header from "./Header/Header";
+import Hero from "./Hero/Hero";
+import Projects from "./Projects/Projects";
+import Tech from "./Tech/Tech";
 import Sidebar from "./component/Sidebar";
 import Modalcontact from './component/util/modal/Modalcontact';
-import About from './component/About';
+import About from './About/About';
+
 
 export default function Home() {
   const [open, setOpen] = useState<boolean>(false);
@@ -18,6 +22,9 @@ export default function Home() {
   const ProjectsRef = useRef(null);
   const TechStatck = useRef(null);
   const AboutRef = useRef(null)
+  const mainContainerRef = useRef(null);
+  const isAtBottom = useIsAtBottom(mainContainerRef, 100);
+  const isScrolling = useIsScrolling(mainContainerRef);
 
   const handleOpenModal = () => {
     setOpen(!open);
@@ -32,7 +39,7 @@ export default function Home() {
     if (ref.current) {
       ref.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        block: 'start',
       });
     }
   }
@@ -46,8 +53,9 @@ export default function Home() {
   }, []);
 
 
+
   return (
-    <div className={`mainColor h-screen w-screen flex flex-col items-center py-3  snap-y snap-mandatory relative scroll-smooth ${allowScroll ? "overflow-x-auto overflow-y-scroll " : "overflow-hidden"}`}>
+    <div ref={mainContainerRef} className={`mainColor h-screen w-screen flex flex-col items-center py-3 snap-y snap-mandatory relative scroll-smooth ${allowScroll ? "overflow-x-auto overflow-y-scroll " : "overflow-hidden"}`}>
 
       <div className="fixed top-3 left-[10%] z-50 xl:hidden">
         <Sidebar
@@ -58,6 +66,7 @@ export default function Home() {
           handleOpenContacts={handleOpenModal}
           handleOpenSidebar={handleOpenSidebar}
           openSidebar={openSidebar}
+          isUserScrolling={isScrolling}
         />
       </div>
 
@@ -73,22 +82,31 @@ export default function Home() {
           scrollToTechStack={() => scrollToRef(TechStatck)}
           scrollToAbout={() => scrollToRef(AboutRef)}
           handleOpenContacts={handleOpenModal}
+          isUserScrolling={isScrolling}
         />
       </motion.div>
       {/* Pass the functions as props */}
 
-      <div ref={HeroRef} className="snap-end w-[100%] h-[100%] shrink-0">
+      <div ref={HeroRef} className="w-[100%] h-[100%] shrink-0">
         <Hero />
       </div>
-      <div ref={TechStatck} className="snap-end mt-5">
+      <div ref={TechStatck} className=" mt-5">
         <Tech />
       </div>
-      <div ref={ProjectsRef} />
-      <div className="snap-start">
+      <div ref={ProjectsRef}>
         <Projects />
       </div>
-      <div ref={AboutRef} className="snap-start w-full h-full flex flex-col items-center justify-center shrink-0 relative">
+      <div ref={AboutRef} className=" w-full h-full flex flex-col items-center justify-center shrink-0 relative">
         <About />
+
+        {isAtBottom && (
+          <div className='absolute bottom-20 '>
+            <button onClick={() => scrollToRef(HeroRef)} className='h-10 w-10 rounded-full items-center justify-center bg-slate-800/50 flex animate-bounce hover:animate-none duration-300 focus:scale-90 hover:scale-110 cursor-pointer'>
+              <LuArrowUpFromDot size={25} />
+            </button>
+          </div>
+        )}
+
 
         <div className='w-full  flex justify-center absolute bottom-0 font-roboto'>
           <h3 className='italic text-md font-thin text-slate-500 '>SeekerDev <span className='font-roboto tracking-wider'>V.2</span></h3>

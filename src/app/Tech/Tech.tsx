@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef } from "react";
-import IconSorter from "./util/icon/IconSorter";
+import IconSorter from "../component/util/icon/IconSorter";
 import { motion, useInView } from "framer-motion";
 
 const Tech = () => {
@@ -69,7 +69,7 @@ const Tech = () => {
             >
                 <>
                     <h1 className="font-semibold pb-3 text-lg italic px-3">Programming Languages and Frontend Technologies</h1>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-x-5">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-x-10">
                         {languages.map((meta_data, index) => (
                             <motion.div
                                 key={index}
@@ -79,9 +79,9 @@ const Tech = () => {
                                 <div className="icon w-fit mr-1 flex-shrink-0 rounded-full items-center flex justify-center">
                                     <label className="w-13 h-13">{<IconSorter name={meta_data.type} />}</label>
                                 </div>
-                                <label className="textColor font-thin mt-1 flex justify-center flex-wrap text-clip">
+                                {/* <label className="textColor font-thin mt-1 flex justify-center flex-wrap text-clip">
                                     {meta_data.type}
-                                </label>
+                                </label> */}
                             </motion.div>
                         ))}
                     </div>
@@ -99,9 +99,9 @@ const Tech = () => {
                                 <div className="icon w-fit mr-1 flex-shrink-0 rounded-full items-center flex justify-center">
                                     <label className="w-13 h-13">{<IconSorter name={meta_data.type} />}</label>
                                 </div>
-                                <label className="textColor font-thin mt-1 flex justify-center flex-wrap text-clip">
+                                {/* <label className="textColor font-thin mt-1 flex justify-center flex-wrap text-clip">
                                     {meta_data.type}
-                                </label>
+                                </label> */}
                             </motion.div>
                         ))}
                     </div>
@@ -119,9 +119,9 @@ const Tech = () => {
                                 <div className="icon w-fit mr-1 flex-shrink-0 rounded-full items-center flex justify-center">
                                     <label className="w-13 h-13">{<IconSorter name={meta_data.type} />}</label>
                                 </div>
-                                <label className="textColor font-thin mt-1 flex justify-center flex-wrap text-clip">
+                                {/* <label className="textColor font-thin mt-1 flex justify-center flex-wrap text-clip">
                                     {meta_data.type}
-                                </label>
+                                </label> */}
                             </motion.div>
                         ))}
                     </div>

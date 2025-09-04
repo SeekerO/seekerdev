@@ -2,8 +2,8 @@ import React from "react";
 import { FaFacebook, FaDiscord, FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
-import TypewriterAnimation from "./util/TypeWriterAnimationHeader";
-import Profile from "./Profile";
+import TypewriterAnimation from "../component/util/TypeWriterAnimationHeader";
+import Profile from "../component/Profile";
 const Hero = () => {
 
     const containerVariants = {
@@ -66,19 +66,19 @@ const Hero = () => {
                 </motion.p>
 
                 <motion.div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 mt-4" variants={containerVariants}>
-                    <motion.button onClick={() => handleOpenSocMed("https://www.facebook.com/baisa001")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer" variants={itemVariants}>
+                    <motion.button onClick={() => handleOpenSocMed("https://www.facebook.com/baisa001")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer active:scale-90" variants={itemVariants}>
                         <FaFacebook />
                         Facebook
                     </motion.button>
-                    <motion.button onClick={() => handleOpenSocMed("https://github.com/SeekerO")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer" variants={itemVariants}>
+                    <motion.button onClick={() => handleOpenSocMed("https://github.com/SeekerO")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer active:scale-90" variants={itemVariants}>
                         <FaGithub />
                         Github
                     </motion.button>
-                    <motion.a onClick={() => handleOpenSocMed("https://www.linkedin.com/in/john-albert-baisa-a40041273/")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer" variants={itemVariants}>
+                    <motion.a onClick={() => handleOpenSocMed("https://www.linkedin.com/in/john-albert-baisa-a40041273/")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer active:scale-90" variants={itemVariants}>
                         <FaLinkedin />
                         LinkedIn
                     </motion.a>
-                    <motion.a onClick={() => handleOpenSocMed("https://discordapp.com/users/405593735532118026")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer" variants={itemVariants}>
+                    <motion.a onClick={() => handleOpenSocMed("https://discordapp.com/users/405593735532118026")} className="flex gap-1 tracking-wide items-center text-lg text-gray-400 hover:text-blue-400 duration-300 cursor-pointer active:scale-90" variants={itemVariants}>
                         <FaDiscord />
                         Discord
                     </motion.a>

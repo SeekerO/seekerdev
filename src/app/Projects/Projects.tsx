@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useRef } from "react";
-import Modalproject from "./util/modal/Modalproject";
+import Modalproject from "../component/util/modal/Modalproject";
 import {
     iMonitor,
     Send_here,
@@ -12,10 +12,11 @@ import {
     trackit,
     foodsearchy,
     uptomovie,
-} from "./images/images";
-import proejct_data from "./util/json/json_projects.json";
-import IconSorter from "./util/icon/IconSorter";
+} from "../component/images/images";
+import proejct_data from "../component/util/json/json_projects.json";
+import IconSorter from "../component/util/icon/IconSorter";
 import { motion, useInView } from "framer-motion";
+import ProjectCard from "../component/util/ProjectCard";
 
 const Projects = () => {
 
@@ -72,50 +73,14 @@ const Projects = () => {
             <h1 className="font-bold text-3xl tracking-wider text-center">PROJECTS</h1>
 
             <motion.div
-                className="max-w-5xl grid grid-cols-1 lg:grid-cols-3 px-10 lg:px-0 gap-7 mt-8 mb-10 "
+                className="max-w-5xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10 lg:px-0 gap-5 mt-8 mb-10 "
                 ref={ref}
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
             >
                 {allProjectData.map((item: any, index: number) => (
-                    <motion.div
-                        key={index}
-                        onClick={() => openItem(item)}
-                        className="flex flex-col shadow-md shadow-slate-900 rounded-lg gap-9 px-3 py-4 border-1 border-[#013e3b] relative group hover:scale-110 duration-300 cursor-pointer z-0"
-                        variants={itemVariants}
-                    >
-                        <div
-                            className={`${item.status.includes("online")
-                                ? "text-green-500"
-                                : `${item.status.includes("maintenance", "Under Development")
-                                    ? "text-yellow-500"
-                                    : "text-red-500"
-                                }`
-                                } uppercase text-[10px] font-normal bg-slate-700 w-fit px-3 py-0.5 left-1.5 top-2 flex gap-1 text-center absolute border-[5px] border-[#0C1618] rounded-full z-10`}
-                        >
-                            {item.status}
-                        </div>
-                        <div className="rounded-md w-full ">
-                            <Image
-                                src={setImages(item.src)}
-                                alt={item.title}
-                                className="w-full h-full rounded-md duration-300 border-gray-700 border-2  object-contain relative z-0"
-                            />
-                        </div>
-                        <div className="flex flex-col justify-between h-[200px]">
-                            <div>
-                                <h1 className="font-medium text-2xl">{item.title}</h1>
-                                <p className="text-slate-400 ">{item.discrp}</p>
-                            </div>
-                            <div className="flex gap-1 w-full items-center ">
-                                {Array.isArray(item?.subtitle) &&
-                                    item.subtitle.map((item1: string, index: number) => (
-                                        <label key={index} className="h-5 w-5"> <IconSorter name={item1} /></label>
-                                    ))}
-                            </div>
-                        </div>
-                    </motion.div>
+                    <ProjectCard key={index} item={item} index={index} openItem={openItem} setImages={setImages} itemVariants={itemVariants} />
                 ))}
             </motion.div>
             <Modalproject open={open} close={handleCloseModal} item={item} />

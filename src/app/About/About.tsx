@@ -28,7 +28,7 @@ const About = () => {
 
     return (
         <motion.div
-            className="w-4xl textColor flex flex-col items-center gap-10 px-10"
+            className="w-[90%] max-w-5xl textColor flex flex-col items-center gap-10 px-10"
             ref={ref}
             variants={containerVariants}
             initial="hidden"

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion"
 import cat from "./util/json/cat Mark loading.json"
 import LottiePlayer from "./util/LottiePlayer";
+import {
+    grad_pic
+} from "../component/images/images";
 const Profile = () => {
 
     const [isHovered, setIsHovered] = useState<boolean>(false)
@@ -26,12 +29,13 @@ const Profile = () => {
             }}
             transition={{ duration: 0.5, ease: "easeOut" }}
         >
-            <motion.div
-                className="w-full h-full bg-cover bg-center absolute top-0 left-0 rounded-full"
-                style={{ backgroundImage: `url('${PROFILE_IMAGE_URL}')` }}
+            <motion.img
+                className="w-full h-full bg-cover bg-center absolute top-0 left-0 rounded-full object-cover object-top"
+                src={grad_pic.src}
+                alt="Profile Picture"
                 animate={{ opacity: isHovered ? 0 : 1 }}
                 transition={{ duration: 0.2 }}
-            ></motion.div>
+            ></motion.img>
         </motion.div>
         {/* Conditionally render the red square */}
         {isHovered && (

@@ -71,11 +71,14 @@ const Modalcontact = ({ open, close }: { open: boolean, close: () => void }) => 
         }
 
         try {
-            const res = await fetch('/api/send', {
+            const res = await fetch('/api/send-email', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify(letter),
             });
+
 
             const data = await res.json();
 
@@ -201,3 +204,4 @@ const Modalcontact = ({ open, close }: { open: boolean, close: () => void }) => 
 };
 
 export default Modalcontact;
+

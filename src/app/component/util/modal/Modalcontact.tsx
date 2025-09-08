@@ -71,7 +71,7 @@ const Modalcontact = ({ open, close }: { open: boolean, close: () => void }) => 
         }
 
         try {
-            const res = await fetch('/api/send-email', {
+            const res = await fetch('https://seekerdev.vercel.app/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

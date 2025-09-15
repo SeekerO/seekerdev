@@ -10,7 +10,7 @@ import Hero from "./Hero/Hero";
 import Projects from "./Projects/Projects";
 import Tech from "./Tech/Tech";
 import Sidebar from "./component/Sidebar";
-import Modalcontact from './component/util/modal/Modalcontact';
+import Modalcontact from './component/modal/Modalcontact';
 import About from './About/About';
 
 
@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <div ref={mainContainerRef} className={`mainColor h-screen w-screen flex flex-col items-center py-3 snap-y snap-mandatory relative scroll-smooth ${allowScroll ? "overflow-x-auto overflow-y-scroll " : "overflow-hidden"}`}>
 
-      <div className="fixed top-3 left-[10%] z-50 xl:hidden">
+      <div className="z-40 fixed top-0 left-0">
         <Sidebar
           scrollToHero={() => scrollToRef(HeroRef)}
           scrollToProjects={() => scrollToRef(ProjectsRef)}
@@ -74,7 +74,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 3.5 }} // The 2-second delay is added here
-        className='h-full w-full items-center justify-center flex '
+        className='h-full w-full items-center justify-center flex z-30'
       >
         <Header
           scrollToHero={() => scrollToRef(HeroRef)}

@@ -49,22 +49,24 @@ const Sidebar = ({ scrollToHero, scrollToProjects, scrollToTechStack, scrollToAb
         <>
             {show &&
                 <>
-                    <motion.div
-                        variants={{
-                            visible: { y: 4 },
-                            hidden: { y: "-200%" },
-                        }}
-                        animate={isUserScrolling ? "hidden" : "visible"}
-                        transition={{ duration: 1, ease: "easeInOut" }}
-                        className="h-15 w-15 flex items-center justify-center $duration-300 transition-transform">
-                        <button onClick={handleOpenSidebar}>
-                            <FaBars />
-                        </button>
-                    </motion.div>
+                    <div className="w-full flex justify-start fixed top-3 left-[10%]  xl:hidden">
+                        <motion.div
+                            variants={{
+                                visible: { y: 4 },
+                                hidden: { y: "-200%" },
+                            }}
+                            animate={isUserScrolling ? "hidden" : "visible"}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            className="h-15 w-15 flex items-center justify-center $duration-300 transition-transform">
+                            <button onClick={handleOpenSidebar}>
+                                <FaBars />
+                            </button>
+                        </motion.div>
+                    </div>
 
                     <AnimatePresence>
                         {openSidebar && (
-                            <div className="absolute inset-0 h-full w-screen z-50 bg-black/50 backdrop-blur-[2px]">
+                            <div className="absolute inset-0 h-screen w-screen z-50 bg-black/50 backdrop-blur-[2px]">
                                 <motion.div
                                     ref={ref}
                                     initial={{ x: '-100%' }} // Start from outside the left side of the screen

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FaEnvelope, FaEnvelopeOpen } from "react-icons/fa";
-import Modalcontact from "./util/modal/Modalcontact";
+import Modalcontact from "./modal/Modalcontact";
 
 
 interface ContactMeType {

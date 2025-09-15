@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useRef } from "react";
-import Modalproject from "../component/util/modal/Modalproject";
+import Modalproject from "../component/modal/Modalproject";
 import {
     iMonitor,
     Send_here,

@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import IconSorter from "../icon/IconSorter";
+import IconSorter from "../util/icon/IconSorter";
 import { FaTimes, FaGlobe } from "react-icons/fa";
 
 // Assume these are the image imports, similar to your Projects.tsx file
@@ -17,7 +17,7 @@ import {
     trackit,
     foodsearchy,
     uptomovie,
-} from "../../images/images";
+} from "../images/images";
 
 const Modalproject = ({ open, close, item }: { open: boolean, close: () => void, item: any }) => {
 

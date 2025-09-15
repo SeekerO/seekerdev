@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from "resend";
 
-// Initialize the Resend client with your API key
-// For security, you must store your API key in a .env.local file
-// and access it via process.env.RESEND_API_KEY
-// DO NOT expose your API key in the client-side code
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Define the shape of the data we expect from the frontend
